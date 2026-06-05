@@ -66,58 +66,6 @@ nav button.active {
   background: white;
   color: black;
 }
-
-/* MENU SECTION STYLES */
-
-.menu-section {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  padding: 4rem 2rem;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.menu-card h2 {
-  margin-top: 0;
-}
-
-.menu-card {
-  background: white;
-
-  padding: 1.5rem;
-
-  border-radius: 12px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
-}
-
-.menu-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-}
-
-.price {
-  display: block;
-
-  margin-top: 1rem;
-
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
 /* HOME SECTION STYLES */
 
 .hero {
@@ -178,6 +126,72 @@ nav button.active {
   font-size: 1.1rem;
 }
 
+footer {
+  background-color: #1f1a17;
+  color: white;
+
+  padding: 2rem;
+
+  text-align: center;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+/* MENU SECTION STYLES */
+
+.menu-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 4rem 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.menu-card h2 {
+  margin-top: 0;
+}
+
+.menu-card {
+  background: white;
+
+  padding: 1.5rem;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.price {
+  display: block;
+
+  margin-top: 1rem;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
 /* ABOUT SECTION STYLES */
 
 .about-section {
@@ -198,4 +212,35 @@ nav button.active {
   margin-bottom: 1.5rem;
 
   line-height: 1.8;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav button {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .menu-section,
+  .about-section {
+    padding: 3rem 1rem;
+  }
 }
