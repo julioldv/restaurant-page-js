@@ -1,15 +1,25 @@
 const renderHome = (contentContainer) => {
-  const homeTitle = document.createElement("h1");
-  const imgContainer = document.createElement("div");
-  const homeInfoText = document.createElement("p");
+  const hero = document.createElement("section");
+  hero.classList.add("hero");
 
-  homeTitle.textContent = "Café Santa Prisca";
-  imgContainer.classList.add("img-container");
-  homeInfoText.textContent = "The best espresso bar in town!";
+  const title = document.createElement("h1");
+  title.textContent = "Café Santa Prisca";
 
-  contentContainer.appendChild(homeTitle);
-  contentContainer.appendChild(imgContainer);
-  contentContainer.appendChild(homeInfoText);
+  const subtitle = document.createElement("p");
+  subtitle.textContent =
+    "Specialty coffee prepared with care in the heart of the city.";
+
+  const button = document.createElement("button");
+  button.textContent = "View Menu";
+  button.classList.add("hero-btn");
+
+  button.addEventListener("click", () => {
+    document.querySelector("#menu-btn").click();
+  });
+
+  hero.append(title, subtitle, button);
+
+  contentContainer.appendChild(hero);
 };
 
 export default renderHome;
