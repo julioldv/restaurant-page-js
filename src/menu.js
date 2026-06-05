@@ -1,3 +1,5 @@
+import drinks from "./menuData.js";
+
 const renderMenu = (contentContainer) => {
   const menuTitle = document.createElement("h1");
   menuTitle.textContent = "Our coffee drinks";
@@ -11,42 +13,14 @@ const renderMenu = (contentContainer) => {
   menuSection.append(menuTitle, cardsContainer);
 
   contentContainer.appendChild(menuSection);
-
-    const drinks = [
-    {
-        name: "Espresso",
-        description: "Rich and concentrated coffee shot.",
-        price: "$40",
-    },
-    {
-        name: "Americano",
-        description: "Espresso diluted with hot water.",
-        price: "$45",
-    },
-    {
-        name: "Cappuccino",
-        description: "Espresso, steamed milk, and milk foam.",
-        price: "$60",
-    },
-    {
-        name: "Latte",
-        description: "Smooth espresso with steamed milk.",
-        price: "$65",
-    },
-    {
-        name: "Mocha",
-        description: "Espresso, chocolate, and steamed milk.",
-        price: "$70",
-    },
-    {
-        name: "Cold Brew",
-        description: "Slow-steeped coffee served cold.",
-        price: "$65",
-    },
-    ];
   drinks.forEach((drink) => {
     const card = document.createElement("div");
     card.classList.add("menu-card");
+
+    const image = document.createElement("img");
+    image.src = drink.image;
+    image.alt = drink.name;
+    image.classList.add("menu-image");
 
     const title = document.createElement("h2");
     title.textContent = drink.name;
@@ -58,7 +32,7 @@ const renderMenu = (contentContainer) => {
     price.textContent = drink.price;
     price.classList.add("price");
 
-    card.append(title, description, price);
+    card.append(image, title, description, price);
 
     cardsContainer.appendChild(card);
   });
