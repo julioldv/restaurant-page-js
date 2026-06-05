@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    background-color: wheat;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav button{
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+#content{
+ text-align: center;
+}
+
+#content h1{
+    font-size: 3rem;
+}
+
+#content p{
+    font-size: 2rem;
+}
+
+.img-container{
+    height: 100vh;
+    background-image: url(./assets/images/cafe-1.jpg);
+    background-size: 80%;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 4rem;
+}
