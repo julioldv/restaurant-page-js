@@ -1,23 +1,47 @@
+const renderMenu = (contentContainer) => {
+  const menuTitle = document.createElement("h1");
+  menuTitle.textContent = "Nuestros Cafecitos";
 
-const menuTitle = document.createElement("h1");
-const cardsContainer = document.createElement("div");
-const card = document.createElement("div");
+  const cardsContainer = document.createElement("div");
+  cardsContainer.classList.add("cards-container");
 
+  const drinks = [
+    {
+      name: "Espresso",
+      description: "Shot intenso de café preparado al momento.",
+    },
+    {
+      name: "Cappuccino",
+      description: "Espresso con leche texturizada y espuma.",
+    },
+    {
+      name: "Latte",
+      description: "Espresso suave con abundante leche vaporizada.",
+    },
+    {
+      name: "Mocha",
+      description: "Espresso, chocolate y leche texturizada.",
+    },
+  ];
 
-const cardTitle = document.createElement("h2");
-cardTitle.textContent = "Capucchino";
-const cardImg = document.createElement("div");
-const cardDescription = document.createElement("p");
-cardDescription.textContent = "A base de espresso, preparada con leche texturizada y espuma de leche";
+  drinks.forEach((drink) => {
+    const card = document.createElement("div");
+    card.classList.add("menu-card");
 
-menuTitle.textContent = "Nuestros cafecitos";
+    const title = document.createElement("h2");
+    title.textContent = drink.name;
 
+    const description = document.createElement("p");
+    description.textContent = drink.description;
 
+    card.appendChild(title);
+    card.appendChild(description);
 
+    cardsContainer.appendChild(card);
+  });
 
-
-const renderMenu = (contentContainer)  =>{
-    contentContainer.appendChild(menuTitle);
-}
+  contentContainer.appendChild(menuTitle);
+  contentContainer.appendChild(cardsContainer);
+};
 
 export default renderMenu;
