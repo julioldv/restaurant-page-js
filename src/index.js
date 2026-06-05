@@ -13,22 +13,13 @@ const menuBtn = document.querySelector("#menu-btn");
 const aboutBtn = document.querySelector("#about-btn");
 
 
+const renderPage = (renderFunction) => {
+  contentContainer.innerHTML = "";
+  renderFunction(contentContainer);
+};
 
+homeBtn.addEventListener("click", () => renderPage(renderHome));
 
+menuBtn.addEventListener("click", () => renderPage(renderMenu));
 
-homeBtn.addEventListener("click", ()=>{
-    contentContainer.innerHTML = "";
-    renderHome(contentContainer);
-});
-
-menuBtn.addEventListener("click", ()=>{
-    contentContainer.innerHTML = "";
-    renderMenu(contentContainer);
-});
-
-aboutBtn.addEventListener("click", ()=>{
-    contentContainer.innerHTML = "";
-    renderAbout(contentContainer);
-});
-
-
+aboutBtn.addEventListener("click", () => renderPage(renderAbout));
