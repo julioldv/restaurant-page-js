@@ -1,16 +1,25 @@
 const renderAbout = (contentContainer) => {
-  const aboutTitle = document.createElement("h1");
-  const imgContainer = document.createElement("div");
-  const aboutInfoText = document.createElement("p");
+  const section = document.createElement("section");
+  section.classList.add("about-section");
 
-  aboutTitle.textContent = "Sobre nuestro café";
-  imgContainer.classList.add("img-container");
-  aboutInfoText.textContent =
-    "Ofreciendo café de la mejor calidad, extraído al momento.";
+  const title = document.createElement("h1");
+  title.textContent = "About Us";
 
-  contentContainer.appendChild(aboutTitle);
-  contentContainer.appendChild(imgContainer);
-  contentContainer.appendChild(aboutInfoText);
+  const text1 = document.createElement("p");
+  text1.textContent =
+    "At Café Santa Prisca, we believe coffee is more than a beverage. It is an experience that brings people together.";
+
+  const text2 = document.createElement("p");
+  text2.textContent =
+    "Every cup is prepared with attention to detail, using carefully selected beans and traditional brewing techniques.";
+
+  const text3 = document.createElement("p");
+  text3.textContent =
+    "Whether you are looking for a quick espresso or a place to relax with friends, we are happy to welcome you.";
+
+  section.append(title, text1, text2, text3);
+
+  contentContainer.appendChild(section);
 };
 
 export default renderAbout;

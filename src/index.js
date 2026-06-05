@@ -6,8 +6,6 @@ import renderAbout from "./about.js";
 
 const contentContainer = document.querySelector("#content");
 
-renderHome(contentContainer);
-
 const homeBtn = document.querySelector("#home-btn");
 const menuBtn = document.querySelector("#menu-btn");
 const aboutBtn = document.querySelector("#about-btn");
@@ -18,8 +16,28 @@ const renderPage = (renderFunction) => {
   renderFunction(contentContainer);
 };
 
-homeBtn.addEventListener("click", () => renderPage(renderHome));
+const setActiveButton = (button) => {
+  document.querySelectorAll("nav button").forEach((btn) => {
+    btn.classList.remove("active");
+  });
 
-menuBtn.addEventListener("click", () => renderPage(renderMenu));
+  button.classList.add("active");
+};
 
-aboutBtn.addEventListener("click", () => renderPage(renderAbout));
+homeBtn.addEventListener("click", () => {
+  setActiveButton(homeBtn);
+  renderPage(renderHome);
+});
+
+menuBtn.addEventListener("click", () => {
+  setActiveButton(menuBtn);
+  renderPage(renderMenu);
+});
+
+aboutBtn.addEventListener("click", () => {
+  setActiveButton(aboutBtn);
+  renderPage(renderAbout);
+});
+
+renderHome(contentContainer);
+setActiveButton(homeBtn);
