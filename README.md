@@ -2,10 +2,6 @@
 
 A responsive restaurant page built with JavaScript modules and Webpack as part of The Odin Project curriculum.
 
-## Preview
-
-Add a screenshot here after deployment.
-
 ## Features
 
 - Multi-page navigation without page reloads
