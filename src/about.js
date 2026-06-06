@@ -5,17 +5,17 @@ const renderAbout = (contentContainer) => {
   const title = document.createElement("h1");
   title.textContent = "About Us";
 
-  const text1 = document.createElement("p");
-  text1.textContent =
-    "At Café Santa Prisca, we believe coffee is more than a beverage. It is an experience that brings people together.";
+    const text1 = document.createElement("p");
+    text1.textContent =
+    "Café Santa Prisca began as a weekend coffee pop-up focused on serving freshly prepared espresso drinks.";
 
-  const text2 = document.createElement("p");
-  text2.textContent =
-    "Every cup is prepared with attention to detail, using carefully selected beans and traditional brewing techniques.";
+    const text2 = document.createElement("p");
+    text2.textContent =
+    "Every beverage is prepared to order using carefully selected beans and traditional espresso techniques.";
 
-  const text3 = document.createElement("p");
-  text3.textContent =
-    "Whether you are looking for a quick espresso or a place to relax with friends, we are happy to welcome you.";
+    const text3 = document.createElement("p");
+    text3.textContent =
+    "Our goal is simple: serve excellent coffee and create a welcoming space for guests and local visitors.";
 
   section.append(title, text1, text2, text3);
 

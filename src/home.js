@@ -2,6 +2,10 @@ const renderHome = (contentContainer) => {
   const hero = document.createElement("section");
   hero.classList.add("hero");
 
+  const logo = document.createElement("div");
+  logo.classList.add("logo");
+  logo.textContent = "☕";
+  
   const title = document.createElement("h1");
   title.textContent = "Café Santa Prisca";
 
@@ -17,7 +21,7 @@ const renderHome = (contentContainer) => {
     document.querySelector("#menu-btn").click();
   });
 
-  hero.append(title, subtitle, button);
+  hero.append(logo, title, subtitle, button);
 
   contentContainer.appendChild(hero);
 };

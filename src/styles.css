@@ -1,6 +1,26 @@
+:root {
+  --color-primary: #6f4e37;
+  --color-secondary: #d4a373;
+  --color-background: #fefae0;
+  --color-dark: #283618;
+  --color-light: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
-    background-color: wheat;
+    background-color: var(--color-background);
+}
+
+button {
+  transition: all 0.3s ease;
 }
 
 #content{
@@ -63,7 +83,7 @@ nav button:hover {
 }   
 
 nav button.active {
-  background: white;
+  background-color: var(--color-light);
   color: black;
 }
 /* HOME SECTION STYLES */
@@ -126,8 +146,13 @@ nav button.active {
   font-size: 1.1rem;
 }
 
+.logo {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
 footer {
-  background-color: #1f1a17;
+  background-color: var(--color-dark);
   color: white;
 
   padding: 2rem;
