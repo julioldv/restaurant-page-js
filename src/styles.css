@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
 :root {
   --color-primary: #6f4e37;
   --color-secondary: #d4a373;
@@ -33,6 +44,7 @@ button {
 
 #content p{
     font-size: 2rem;
+    line-height: 1.7;
 }
 
 .img-container{
@@ -124,7 +136,7 @@ nav button.active {
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 8vw, 6rem);
   margin-bottom: 1rem;
 }
 
