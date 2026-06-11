@@ -3,13 +3,14 @@ import "./styles.css";
 import renderHome from "./home.js";
 import renderMenu from "./menu.js";
 import renderAbout from "./about.js";
+import renderVisit from "./visit.js";
 
 const contentContainer = document.querySelector("#content");
 
 const homeBtn = document.querySelector("#home-btn");
 const menuBtn = document.querySelector("#menu-btn");
 const aboutBtn = document.querySelector("#about-btn");
-
+const visitBtn = document.querySelector("#visit-btn");
 
 const renderPage = (renderFunction) => {
   contentContainer.innerHTML = "";
@@ -37,6 +38,11 @@ menuBtn.addEventListener("click", () => {
 aboutBtn.addEventListener("click", () => {
   setActiveButton(aboutBtn);
   renderPage(renderAbout);
+});
+
+visitBtn.addEventListener("click", () => {
+  setActiveButton(visitBtn);
+  renderPage(renderVisit);
 });
 
 renderHome(contentContainer);

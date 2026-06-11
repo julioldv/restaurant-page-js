@@ -11,7 +11,11 @@ const renderHome = (contentContainer) => {
 
   const subtitle = document.createElement("p");
   subtitle.textContent =
-    "Specialty coffee prepared with care in the heart of the city.";
+  "Weekend Espresso Bar inside Hotel Santa Prisca";
+
+  const description = document.createElement("p");
+  description.textContent =
+  "Craft coffee prepared to order in the heart of Taxco, Guerrero.";
 
   const button = document.createElement("button");
   button.textContent = "View Menu";
@@ -21,7 +25,7 @@ const renderHome = (contentContainer) => {
     document.querySelector("#menu-btn").click();
   });
 
-  hero.append(logo, title, subtitle, button);
+  hero.append(logo, title, subtitle, description, button);
 
   contentContainer.appendChild(hero);
 };
