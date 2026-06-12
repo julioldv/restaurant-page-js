@@ -181,20 +181,6 @@ nav button.active {
   margin-bottom: 1rem;
 }
 
-footer {
-  background-color: var(--color-dark);
-  color: white;
-
-  padding: 2rem;
-
-  text-align: center;
-}
-
-footer p {
-  margin: 0.3rem 0;
-  font-size: 1rem;
-}
-
 /* MENU SECTION STYLES */
 
 .menu-section {
@@ -320,6 +306,25 @@ footer p {
   font-weight: 600;
 }
 
+/*FOOTER STYLES*/
+
+footer {
+  background-color: var(--color-dark);
+  color: white;
+
+  padding: 2.5rem 1rem;
+
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
 /* RESPONSIVE STYLES */
 
 @media (max-width: 700px) {
