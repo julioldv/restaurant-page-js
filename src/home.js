@@ -18,7 +18,7 @@ const renderHome = (contentContainer) => {
   "Craft coffee prepared to order in the heart of Taxco, Guerrero.";
 
   const button = document.createElement("button");
-  button.textContent = "View Menu";
+  button.textContent = "Explore Our Menu";
   button.classList.add("hero-btn");
 
   button.addEventListener("click", () => {

@@ -28,6 +28,9 @@ html {
 body{
     margin: 0;
     background-color: var(--color-background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -36,6 +39,7 @@ button {
 
 #content{
  text-align: center;
+ flex: 1;
 }
 
 #content h1{
@@ -61,6 +65,27 @@ button {
 
     padding-left: 4rem;
 }
+
+.hero,
+.menu-card,
+.visit-card,
+.about-section {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* NAVIGATION STYLES */
 
@@ -101,6 +126,7 @@ nav button.active {
 
   transform: translateY(-2px);
 }
+
 /* HOME SECTION STYLES */
 
 .hero {
@@ -281,7 +307,9 @@ nav button.active {
 }
 
 .visit-section h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .visit-info {
@@ -304,6 +332,38 @@ nav button.active {
 .visit-note {
   margin-top: 3rem;
   font-weight: 600;
+}
+
+.visit-map {
+  width: 100%;
+  max-width: 800px;
+
+  height: 450px;
+
+  border: none;
+  border-radius: 16px;
+
+  margin-top: 3rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.visit-hero-image {
+  width: 100%;
+
+  max-width: 1000px;
+
+  height: 450px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  margin: 0 auto 3rem auto;
+
+  display: block;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /*FOOTER STYLES*/
