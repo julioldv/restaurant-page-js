@@ -57,6 +57,7 @@ const renderVisit = (contentContainer) => {
   section.append(title, heroImage,infoContainer, mapFrame, note);
 
   contentContainer.appendChild(section);
+  
 };
 
 export default renderVisit;

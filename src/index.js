@@ -45,5 +45,6 @@ visitBtn.addEventListener("click", () => {
   renderPage(renderVisit);
 });
 
+
 renderHome(contentContainer);
 setActiveButton(homeBtn);

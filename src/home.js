@@ -26,7 +26,6 @@ const renderHome = (contentContainer) => {
   });
 
   hero.append(logo, title, subtitle, description, button);
-
   contentContainer.appendChild(hero);
 };
 

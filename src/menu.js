@@ -39,6 +39,7 @@ const renderMenu = (contentContainer) => {
 
   contentContainer.appendChild(menuTitle);
   contentContainer.appendChild(cardsContainer);
+  
 };
 
 export default renderMenu;

@@ -18,7 +18,6 @@ const renderAbout = (contentContainer) => {
     "Our goal is simple: serve excellent coffee and create a welcoming space for guests and local visitors.";
 
   section.append(title, text1, text2, text3);
-
   contentContainer.appendChild(section);
 };
 
